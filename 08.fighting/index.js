@@ -6,7 +6,7 @@ canvas.height = 576
 
 c.fillRect(0, 0, canvas.width, canvas.height)
 
-const gravity = 0.7
+const gravity = 1.5
 
 const background = new Sprite({
   position: {
@@ -18,7 +18,7 @@ const background = new Sprite({
 
 const shop = new Sprite({
   position: {
-    x: 600,
+    x: 300,
     y: 128
   },
   imageSrc: './img/shop.png',
@@ -28,8 +28,8 @@ const shop = new Sprite({
 
 const player = new Fighter({
   position: {
-    x: 0,
-    y: 0
+    x: 200,
+    y: 100
   },
   velocity: {
     x: 0,
@@ -88,7 +88,7 @@ const player = new Fighter({
 
 const enemy = new Fighter({
   position: {
-    x: 400,
+    x: 700,
     y: 100
   },
   velocity: {
