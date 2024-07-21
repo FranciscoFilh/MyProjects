@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Dia Dos Namorados</title>
+
+    <!-- Estilos CSS -->
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #ff8c94, #ffccd0);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .painel {
+            margin: auto; /* Centraliza o painel horizontalmente */
+            background-color: white; /* Fundo branco para o painel */
+            width: 500px; /* Largura fixa do painel */
+            height: 500px; /* Altura fixa do painel */
+            border-radius: 20px; /* Cantos arredondados */
+            text-align: center; /* Alinha o texto ao centro dentro do painel */
+            padding-top: 50px; /* Espaçamento superior para o conteúdo */
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Estilos de fonte */
+        }
+
+        /* Estilo para o botão "Sim" */
+        #sim {
+            height: 40px;
+            width: 60px;
+            background-color: #ff5b63;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: -50px; /* Posição ajustada para sobrepor outro botão */
+            border-radius: 20px; /* Cantos arredondados */
+            font-size: 16px; /* Tamanho da fonte */
+            cursor: pointer; /* Alterando o cursor ao passar por cima */
+            transition: background-color 0.3s ease; /* Transição suave de cor de fundo */
+            margin-bottom: 10px; /* Espaçamento inferior para separar dos botões */
+        }
+
+        #sim:hover {
+            background-color: #ff404a; /* Cor de fundo mais escura ao passar o mouse */
+        }
+
+        /* Estilo para o botão "Não" */
+        #nao {
+            position: absolute; /* Posicionamento absoluto para movimento livre */
+            height: 40px;
+            width: 60px;
+            background-color: #ff5b63;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 10px; /* Posição inicial relativa ao seu contêiner */
+            border-radius: 20px; /* Cantos arredondados */
+            font-size: 16px; /* Tamanho da fonte */
+            cursor: pointer; /* Alterando o cursor ao passar por cima */
+            transition: background-color 0.3s ease; /* Transição suave de cor de fundo */
+            margin-bottom: 10px; /* Espaçamento inferior para separar dos botões */
+        }
+
+        #nao:hover {
+            background-color: #ff404a; /* Cor de fundo mais escura ao passar o mouse */
+        }
+    </style>
+
+</head>
+<body>
+
+<!-- Painel de conteúdo principal -->
+<div class="painel">
+    <h1> Feliz Dia dos Namorados</h1> <!-- Título principal -->
+
+    <img src="https://gifman.net/wp-content/uploads/2019/06/ursinho-fofo-apaixonado.gif" alt=""> <!-- Imagem animada em GIF -->
+
+    <h2>Aceita namorar comigo? </h2> <!-- Pergunta principal -->
+
+    <!-- Botão "Sim" que leva a um vídeo do YouTube -->
+    <!-- <a href="https://www.youtube.com/watch?v=oRvND-r57Us"><button id="sim"> Sim! </button></a> -->
+
+    <!-- Botão "Sim" que mostra uma mensagem de alerta -->
+    <button id="sim" onclick="mensagem()"> Sim! </button>
+
+    <!-- Botão "Não" que ativa uma função para mover aleatoriamente -->
+    <button onmouseover="fuja()" id="nao"> Não! </button>
+
+</div>
+
+<!-- Funções em JavaScript -->
+<script>
+    // Função para mover o botão "Não" aleatoriamente
+    function fuja() {
+        var botaoNao = document.getElementById("nao");
+
+        var larguraJanela = window.innerWidth;
+        var alturaJanela = window.innerHeight;
+
+        var maxX = larguraJanela - botaoNao.offsetWidth;
+        var maxY = alturaJanela - botaoNao.offsetHeight;
+
+        var aleatorioX = Math.floor(Math.random() * maxX);
+        var aleatorioY = Math.floor(Math.random() * maxY);
+
+        botaoNao.style.left = aleatorioX + "px";
+        botaoNao.style.top = aleatorioY + "px";
+    }
+
+    // Função para exibir uma mensagem de alerta ao clicar no botão "Sim"
+    function mensagem() {
+        alert("Depois de todo esse tempo, você continua incrível. Me sinto muito abençoado por ter você comigo.");
+    }
+</script>
+
+</body>
+</html>
