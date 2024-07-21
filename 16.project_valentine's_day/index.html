@@ -18,6 +18,15 @@
             height: 100vh;
         }
 
+        /* Adicionar estilos para telas menores */
+        @media (max-width: 600px) {
+            .painel {
+                width: 90%; /* Ajuste a largura para ocupar a largura disponível */
+                height: auto; /* Permita que a altura se ajuste ao conteúdo */
+                padding-top: 30px; /* Reduza o espaçamento superior */
+            }
+        }
+
         .painel {
             margin: auto; /* Centraliza o painel horizontalmente */
             background-color: white; /* Fundo branco para o painel */
@@ -86,10 +95,10 @@
     <!-- <a href="https://www.youtube.com/watch?v=oRvND-r57Us"><button id="sim"> Sim! </button></a> -->
 
     <!-- Botão "Sim" que mostra uma mensagem de alerta -->
-    <button id="sim" onclick="mensagem()"> Sim! </button>
+    <button id="sim" onclick="mensagem()"> Sim </button>
 
     <!-- Botão "Não" que ativa uma função para mover aleatoriamente -->
-    <button onmouseover="fuja()" id="nao"> Não! </button>
+    <button onmouseover="fuja()" id="nao"> Não </button>
 
 </div>
 
