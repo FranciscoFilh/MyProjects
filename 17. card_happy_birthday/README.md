@@ -1,6 +1,3 @@
-# CardHappyBirthday
+# Cartão Feliz Aniversário
 
-CardHappyBirthday
-![CARTÃO POSTAL](https://user-images.githubusercontent.com/56793368/212197582-cdcb30d7-c799-4cd0-b67f-8870702831be.jpg)
-
-- HTML and CSS
+Você pode acessar o cartão online [clicando aqui](https://franciscofilh.github.io/MyProjects/17.%20card_happy_birthday/).
