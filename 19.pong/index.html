@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <script defer src="pong.js"></script>
+    <title>PONG</title>
+</head>
+<body>
+    <canvas width="650px" height="300px" tabindex="0">
+        <h1>Se você está vendo está mensagem é porque seu navegador não consegue executar Javascript<br>Por favor <a href="https://www.google.com/chrome/" target="_blank" rel="external">clique aqui</a> para baixar um navegador compativel</h1>
+    </canvas>
+    <div id="controls">
+        <h1>Controles</h1>
+        <img id="img_instructions" src="img/controls.png" alt="game controls/controles" title="controles">
+    </div>
+    <style>
+        * {
+            margin: 0;
+            margin-top: 2vh;
+            margin-bottom: 2vh;
+        }
+        body {
+            user-select: none;
+            font-family: monospace;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(0, 0, 0);
+            overflow: hidden;
+        }
+        #controls {
+            display: inherit;
+            flex-direction: column;
+            align-items: center;
+        }
+        #img_instructions {
+            max-width: 50vw;
+        }
+        canvas {
+            max-width: 80vw;
+        }
+        canvas h1 {
+            font-size: large;
+        }
+        canvas h1 a {
+            color: cyan;
+        }
+        .github-corner {
+            border-bottom: 0;
+            position: fixed;
+            right: 0;
+            text-decoration: none;
+            top: 0;
+            z-index: 1;
+            margin: 0;
+        }
+        .github-corner:hover .octo-arm {
+            -webkit-animation: octocat-wave 560ms ease-in-out;
+            animation: octocat-wave 560ms ease-in-out;
+        }
+        .github-corner svg {
+            margin: 0;
+            color: rgb(0, 0, 0);
+            fill:#ffffff;
+            height: 80px;
+            width: 80px;
+        }
+        @keyframes octocat-wave {
+
+            0%,
+            100% {
+                transform: rotate(0);
+            }
+
+            20%,
+            60% {
+                transform: rotate(-25deg);
+            }
+
+            40%,
+            80% {
+                transform: rotate(10deg);
+            }
+        }
+        @media (orientation: portrait){
+            canvas {
+                width: 80vw;
+                image-rendering: optimizSpeed;
+            }
+            #img_instructions {
+                width: 50vw;
+            }
+        }    
+    </style>    
+</body>
+</html>
